@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ua">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #433A5E;
+            font-size: 18px;
+        }
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        .cyan-text,
+        .cyan-text a {
+            color: #00ECBB;
+        }
+
+        .white-text{
+            color: #fff;
+        }
+        .grey-text {
+            color: gray;
+            font-weight: 600;
+        }
+
+        .nav {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 50px;
+            align-items: center;
+        }
+
+        .nav li {
+            display: inline-block;
+            padding: 10px 10px 10px 10px;
+            font-size:20px;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #00ECBB;
+
+        }
+        .main-section,
+        .violet-section {
+            background: #6A13EB;
+        }
+
+        .about-section,
+        .main-section,
+        .violet-section{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
+
+        .main-section{
+            padding-top: 80px;
+            padding-bottom: 50px;
+        }
+
+        .violet-section {
+            padding-top: 80px;
+            padding-bottom: 80px;
+            background-image: url("images/credo-bg.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .violet-section p {
+            margin: 0;
+        }
+
+        .logo-text {
+            font-size: 32px;
+            letter-spacing: 10px;
+        }
+        .container {
+            width: 900px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        h2 {
+            font-size: 40px;
+            color: #000;
+            font-family: 'Open Sans', sans-serif;
+            margin-top: 0;
+            letter-spacing: 2px;
+
+        }
+
+        h4 {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .main-section-img {
+            display: block;
+            max-width: 100%;
+
+        }
+
+        .checkmark-list,
+        .green-checkmark {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        .green-checkmark {
+            column-count: 2;
+        }
+
+        .checkmark-list li {
+            background: url("images/icon-ok.png") no-repeat center left;
+            min-height: 40px;
+            padding-left: 80px;
+            margin-bottom: 20px;
+            /*list-style-image: url("images/icon-ok.png");*/
+
+        }
+
+
+        .green-checkmark li {
+            background: url("images/icon-ok-2.png") no-repeat center left;
+            min-height: 60px;
+            padding-left: 80px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+        .list-user {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .list-user li {
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        .list-user span {
+            font-size: 18px;
+        }
+
+        .about-text {
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 40px;
+        }
+
+        .my-img {
+            border-radius: 50%;
+        }
+
+        .image-position {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        #main-form {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        #main-form input,
+        #main-form textarea {
+            padding: 20px;
+            margin-bottom: 30px;
+            font-size: 20px;
+            font-family: 'Open Sans', sans-serif;
+            outline: none;
+            border: none;
+            border: 3px solid #00ECBB;
+            font-weight: 700;
+            width: 100%;
+        }
+
+        #main-form textarea {
+            height: 150px;
+        }
+
+        #main-form #submit {
+            width: 300px;
+            background: #00ECBB;
+            color: #6A13EB;
+            cursor: pointer;
+        }
+
+        .to-top {
+            position: fixed;
+            right: 100px;
+            bottom: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            min-height: 70px;
+            background: #00ECBB;
+            /*transform: rotate(180deg);*/
+            text-decoration: none;
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .author-block {
+            display: flex;
+            align-items: flex-end;
+            min-height: 770px;
+            padding: 30px 60px;
+            background-image: url("images/photo_2021-12-13_12-46-50.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            box-shadow: 0px -120px 50px 0px rgb(0 0 0 / 80%) inset;
+        }
+
+        .author-block p {
+            margin: 0;
+            line-height: 1.7;
+            color: rgba(255 255 255 0.8);
+        }
+
+    </style>
+</head>
+<body>
+    <div class="main-section" id="top">
+        <div class="container">
+            <ul class="cyan-text nav">
+                <li>
+                    <span class="cyan-text logo-text">АННА <br> ЗАБУРАННА</span>
+                </li>
+                <li><a href="#education">Навчання</a></li>
+                <li><a href="#main-technology">Основні технології</a></li>
+                <li><a href="#strengths">Сильні сторони</a></li>
+                <li><a href="#contact">Контакти</a></li>
+            </ul>
+
+            <div class="author-block">
+                <p class="white-text">Студентка з міста Вінниця. Навчаюсь на 2 курсі факультету міжнародних відносин. Зрозуміла, що це не моє - вже близько пів року вивчаю програмування</p>
+            </div>
+
+            <h1 class="white-text">Дипломат за освітою, айтішнік в душі</h1>
+        </div>
+<!--        container-->
+    </div>
+<!--    main section-->
+
+    <div class="about-section" style="padding-bottom: 30px" id="education">
+        <div class="container">
+            <h2>Навчання</h2>
+            <ol class="list-user">
+                <li><span class="grey-text">2020 р.</span> - студентка ІМВ КНУ ім. Т. Г. Шевченка</li>
+                <li><span class="grey-text">2021 р.</span> - перейшла до ДОНну ім. В. Стуса на заочну форму, щоб мати можливість розвиватись в сфері IT</li>
+                <li><span class="grey-text">березень 2021 р.</span> - почала вивчати програмування</li>
+                <li><span class="grey-text">грудень 2021 р. </span>- прийшла на безкоштовний курс ITEA, щоб закріпити усі знання з HTML та CSS</li>
+            </ol>
+        </div>
+    </div>
+<!--    about-section-->
+
+    <div class="about-section" style="padding-bottom: 30px" id="main-technology">
+        <div class="container">
+            <h2>Основні технології, які вивчаю в IT</h2>
+            <p>Маю базове розуміння: </p>
+            <ul class="checkmark-list">
+                <li>HTML, CSS</li>
+                <li>JavaScript</li>
+                <li>React.js</li>
+                <li>Node.js, Express.js</li>
+                <li>Бази даних: MongoDB</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="about-section" id="strengths">
+        <div class="container">
+            <h2>Мої сильні сторони</h2>
+            <ul class="green-checkmark">
+                <li>старанність</li>
+                <li>стресостійкість</li>
+                <li>комунікабельність</li>
+                <li>наполегливість</li>
+                <li>терплячість</li>
+                <li>знання англійської</li>
+            </ul>
+        </div>
+    <!--    container-->
+    </div>
+<!--    about-section-->
+
+    <div class="violet-section">
+        <div class="container">
+            <h2 class="white-text">Мій принцип роботи</h2>
+            <p class="white-text"><i>"Вперед - ні кроку назад"</i></p>
+        </div>
+    <!--        container-->
+    </div>
+        <!--    violet-section-->
+
+
+
+    <div class="about-section">
+        <div class="container">
+        <h2>Трохи про особисте</h2>
+            <p class="about-text">Відвідую заняття з повітряної гімнастики. У вільний час люблю читати</p>
+            <div class="image-position">
+                <img src="images/personal-img-1.png" alt="image 1" class="my-img">
+                <img src="images/personal-img-2.png" alt="image 2" class="my-img">
+                <img src="images/personal-img-3.png" alt="image 3" class="my-img">
+            </div>
+        </div>
+    <!--    container-->
+    </div>
+<!--    about-section-->
+
+    <div class="about-section contact-section" id="contact">
+        <div class="container">
+            <h2>Контакт</h2>
+            <form action="#" method="post" id="main-form">
+                <input type="text" name="name" placeholder="ПІБ">
+                <input type="email" name="email" placeholder="Email">
+                <textarea name="message" placeholder="Повідомлення"></textarea>
+                <input type="submit" value="Відправити" id="submit">
+            </form>
+        </div>
+    <!--container-->
+        <a href="#top" class="to-top">/\</a>
+    </div>
+<!--about-section-->
+
+</body>
+</html>
